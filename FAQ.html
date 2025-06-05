@@ -90,23 +90,36 @@
 </head>
 
 <body class="bg-white text-gray-900">
-  <header>
+  <!-- Header & Navbar -->
+    <header>
     <div class="max-w-7xl mx-auto flex justify-between items-center p-6">
-      <div class="logo-container">
-        <a href="index.html" class="logo-text">ADV. SHAGIMON V J</a>
-      </div>
-      <div class="md:hidden">
+        <div class="logo-container">
+            <a href="index.html" class="logo-text">ADV. SHAGIMON V J</a>
+        </div>
+
+        <!-- Hamburger Icon (mobile) -->
+        <div class="md:hidden">
         <button id="menu-toggle" class="text-2xl focus:outline-none" aria-label="Toggle menu">
-          <i class="fas fa-bars"></i>
+            <i class="fas fa-bars"></i>
         </button>
-      </div>
-      <nav class="hidden md:flex space-x-8 text-xs font-semibold tracking-wider">
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8 text-xs font-semibold tracking-wider">
         <a href="index.html" class="hover:text-gray-500 block">HOME</a>
         <a href="profile.html" class="hover:text-gray-500 block">ABOUT</a>
         <a href="FAQ.html" class="hover:text-gray-500 block">FAQ</a>
-      </nav>
+        </nav>
     </div>
-  </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col px-6 pb-4 space-y-2 text-xs font-semibold tracking-wider" style="position:relative; z-index:9999;">
+            <a href="index.html" class="hover:text-gray-500 block">HOME</a>
+            <a href="profile.html" class="hover:text-gray-500 block">ABOUT</a>
+            <a href="FAQ.html" class="hover:text-gray-500 block">FAQ</a>
+        </div>
+
+    </header>
 
   <section class="max-w-4xl mx-auto py-20 px-6">
     <h2 class="text-xl font-bold mb-10 tracking-wide">Frequently Asked Questions</h2>
