@@ -58,37 +58,24 @@
     .faq-answer.open {
       display: block;
     }
-     @media (max-width: 768px) {
-        .logo-container::before {
-          font-size: 48px;
-          letter-spacing: 10px;
-          top: -23px;
-        }
+
+    @media (max-width: 768px) {
+      .logo-container::before {
+        font-size: 48px;
+        letter-spacing: 10px;
+        top: -23px;
       }
-      @media (max-width: 768px) {
-        .logo-text {
-          font-size: 1rem; /* ~16px */
-          padding: 0 6px;
-          letter-spacing: 0.1em;
-        }
+    }
+    @media (max-width: 768px) {
+      .logo-text {
+        font-size: 1rem; /* ~16px */
+        padding: 0 6px;
+        letter-spacing: 0.1em;
       }
+    }
   </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const questions = document.querySelectorAll('.faq-question');
 
-      questions.forEach((question) => {
-        question.addEventListener('click', () => {
-          const answer = question.nextElementSibling;
-          answer.classList.toggle('open');
-          question.querySelector('i').classList.toggle('fa-chevron-down');
-          question.querySelector('i').classList.toggle('fa-chevron-up');
-        });
-      });
-    });
-  </script>
 </head>
-
 <body class="bg-white text-gray-900">
   <!-- Header & Navbar -->
     <header>
@@ -196,5 +183,41 @@
       </div>
     </div>
   </section>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Existing nav toggle
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    });
+  }
+
+  // FAQ toggle logic
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const icon = item.querySelector('i');
+
+    question.addEventListener('click', () => {
+      answer.classList.toggle('open');
+      icon.classList.toggle('fa-chevron-down');
+      icon.classList.toggle('fa-chevron-up');
+    });
+  });
+});
+</script>
+
 </body>
 </html>
