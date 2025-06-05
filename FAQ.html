@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ – Adv. Shagimon V J</title>
+  <link href="/src/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto Mono', monospace;
+    }
+    .logo-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+    .logo-container::before {
+      content: 'S V J';
+      font-size: 80px;
+      color: rgba(0, 0, 0, 0.05);
+      position: absolute;
+      left: 13px;
+      top: -40px;
+      z-index: 0;
+      letter-spacing: 20px;
+      white-space: nowrap;
+    }
+    .logo-text {
+      position: relative;
+      z-index: 1;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      padding: 0 10px;
+      letter-spacing: 0.2em;
+      white-space: nowrap;
+    }
+    .faq-item {
+      border-bottom: 1px solid #ccc;
+    }
+    .faq-question {
+      cursor: pointer;
+      padding: 1rem 0;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-answer {
+      display: none;
+      padding-bottom: 1rem;
+      color: #444;
+    }
+    .faq-answer.open {
+      display: block;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const questions = document.querySelectorAll('.faq-question');
+
+      questions.forEach((question) => {
+        question.addEventListener('click', () => {
+          const answer = question.nextElementSibling;
+          answer.classList.toggle('open');
+          question.querySelector('i').classList.toggle('fa-chevron-down');
+          question.querySelector('i').classList.toggle('fa-chevron-up');
+        });
+      });
+    });
+  </script>
+</head>
+<body class="bg-white text-gray-900">
+  <header>
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-6">
+      <div class="logo-container">
+        <a href="index.html" class="logo-text">ADV. SHAGIMON V J</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-2xl focus:outline-none" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <nav class="hidden md:flex space-x-8 text-xs font-semibold tracking-wider">
+        <a href="index.html" class="hover:text-gray-500 block">HOME</a>
+        <a href="profile.html" class="hover:text-gray-500 block">ABOUT</a>
+        <a href="FAQ.html" class="hover:text-gray-500 block">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="max-w-4xl mx-auto py-20 px-6">
+    <h2 class="text-xl font-bold mb-10 tracking-wide">Frequently Asked Questions</h2>
+
+    <div class="space-y-6">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What are ‘service matters’ in the context of school teachers and staff?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Service matters refer to legal issues related to employment conditions—appointments, promotions, transfers, pensions, and retirement benefits—primarily for government and aided school staff in Kerala.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Who can file a service case?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Any teaching or non-teaching staff facing violations in service-related rights can file a case before educational authorities, KAT, or the High Court.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Is it necessary to approach courts directly?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Not always. Many disputes can be initially resolved by departmental representation. Legal intervention is needed when these channels fail.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can a retired teacher file a case for delayed benefits?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Yes. Disputes over pensions, retirement benefits, or service records are legally actionable.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What is the time limit for service-related cases?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Typically three years from the date of the issue, but delays may be condoned based on context.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Why hire a lawyer for service cases?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Service law involves strict procedures. Experienced counsel ensures proper filing, jurisdiction handling, and timely representation.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Does Adv. Shagimon V J handle these cases?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Yes. His background in education and legal practice makes him uniquely equipped to represent such cases effectively.
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

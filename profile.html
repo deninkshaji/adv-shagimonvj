@@ -54,6 +54,24 @@
         }
       }
   </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+
+        toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        });
+
+        menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+        });
+        });
+    });
+    </script>
+
 </head>
 <body class="bg-white text-gray-900">
 
@@ -74,34 +92,19 @@
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex space-x-8 text-xs font-semibold tracking-wider">
         <a href="index.html" class="hover:text-gray-500 block">HOME</a>
-        <a href="profile.html" class="hover:text-gray-500 block">PROFILE</a>
+        <a href="profile.html" class="hover:text-gray-500 block">ABOUT</a>
+        <a href="FAQ.html" class="hover:text-gray-500 block">FAQ</a>
         </nav>
     </div>
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden flex-col px-6 pb-4 space-y-2 text-xs font-semibold tracking-wider" style="position:relative; z-index:9999;">
             <a href="index.html" class="hover:text-gray-500 block">HOME</a>
-            <a href="profile.html" class="hover:text-gray-500 block">PROFILE</a>
+            <a href="profile.html" class="hover:text-gray-500 block">ABOUT</a>
+            <a href="FAQ.html" class="hover:text-gray-500 block">FAQ</a>
         </div>
 
     </header>
-
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const toggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('mobile-menu');
-
-        toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        });
-
-        menu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.add('hidden');
-        });
-        });
-    });
-    </script>
 
     <!-- Profile Section -->
     <section class="bg-white py-20 px-6">
@@ -110,9 +113,7 @@
         <div class="space-y-6">
         <p class="text-lg leading-relaxed text-gray-800 font-light">
             Shagimon V J is a seasoned educator and legal professional with a unique dual-career background. He earned his LL.B. from Government Law College, Thiruvananthapuram, early in his career, before entering the education sector. He served for several decades as a Higher Secondary School Teacher and later as Principal, gaining deep insight into academic systems and administrative processes.
-        </p>
-        <p class="text-lg leading-relaxed text-gray-800 font-light">
-            After retiring from government service, he transitioned to full-time legal practice. He is currently associated with P P Aboobacker Associates in Taliparamba. His legal practice focuses on educational service rules, staff-related disputes, and institutional legal consultancy. Leveraging his combined experience in education and law, he provides expert legal counsel to individuals and institutions across Kerala.
+            <br> After retiring from government service, he transitioned to full-time legal practice. He is currently associated with P P Aboobacker Associates in Taliparamba. His legal practice focuses on educational service rules, staff-related disputes, and institutional legal consultancy. It also spans consumer rights, human rights, employment rights, and family law. Leveraging his combined experience in education and law, he provides expert legal counsel to individuals and institutions across Kerala.
         </p>
         </div>
     </div>
